@@ -9,6 +9,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'nathanaelkane/vim-indent-guides' 
 " Nerdtree file explorer
 Plug 'scrooloose/nerdtree'   
+" Keep Nerdtree open across tabs
+Plug 'jistr/vim-nerdtree-tabs'   
 " Better commenting commands
 Plug 'scrooloose/nerdcommenter'   
 " Git integration with vim 
