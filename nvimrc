@@ -65,6 +65,8 @@ call plug#end()
 "-----------------------------------------------------------------------------------------------------------------------
 " User Preferences
 "-----------------------------------------------------------------------------------------------------------------------
+" Set Autocomplete
+set omnifunc=syntaxcomplete#Complete
 " Set map leader
 let mapleader="\\"
 " Expand tabs into spaces
