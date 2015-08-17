@@ -6,4 +6,5 @@ noremap <Leader>w :update<CR>
 noremap <Leader>q :quit<CR>
 " Visually select pasted text
 nnoremap gp `[v`]
-
+" Use the clipboard
+set clipboard+=unnamedplus
