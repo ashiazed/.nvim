@@ -146,21 +146,21 @@ nmap yY ^y$
 "-----------------------------------------------------------------------------------------------------------------------
 " Solarized cterm colors
 " 0 = almost dark blue // 1 = red
-" 2 = green // 3 = yellow
-" 4 = light blue // 5 = pink
-" 6 = cyan // 7 = beige
-" 8 = dark blue // 9 = orange
-" 10 = dark grey // 11 = grey
-" 12 = light grey // 13 = purple
-" 14 = grey // 15 = white
+" 2 = green            // 3 = yellow
+" 4 = light blue       // 5 = pink
+" 6 = cyan             // 7 = beige
+" 8 = dark blue        // 9 = orange
+" 10 = dark grey       // 11 = grey
+" 12 = light grey      // 13 = purple
+" 14 = grey            // 15 = white
 " 16 = black
 "
 " Highlight for searching (Light Background)
 "hi Search guibg=Green guifg=Black
 "hi Search cterm=NONE ctermfg=Black ctermbg=Green
 " Highlight for searching (Dark Background)
-"hi Search guibg=White guifg=Red
-"hi Search cterm=NONE ctermfg=Red ctermbg=White
+"hi Search guibg=Grey guifg=Red
+"hi Search cterm=NONE ctermfg=1 ctermbg=15
 "
 "Colorscheme
 let g:solarized_termtrans=1
