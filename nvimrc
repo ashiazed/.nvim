@@ -6,53 +6,53 @@ call plug#begin('~/.nvim/plugged')
 " Faster navigation through files
 Plug 'kien/ctrlp.vim'
 " Creates indent lines, makes code a bit easier to read
-Plugin 'nathanaelkane/vim-indent-guides' 
+Plug 'nathanaelkane/vim-indent-guides' 
 " Nerdtree file explorer
-Plugin 'scrooloose/nerdtree'   
+Plug 'scrooloose/nerdtree'   
 " Better commenting commands
-Plugin 'scrooloose/nerdcommenter'   
+Plug 'scrooloose/nerdcommenter'   
 " Git integration with vim 
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " Multiple cursors
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 " Syntax Checker
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 " Vdebug, essential for php code
-Plugin 'joonty/vdebug'
+Plug 'joonty/vdebug'
 " Easymotion, easier moving around current buffer
-Plugin 'Lokaltog/vim-easymotion'
+Plug 'Lokaltog/vim-easymotion'
 " Provides yank history and buffer switching
-Plugin 'Shougo/unite.vim'
+Plug 'Shougo/unite.vim'
 " Snippets, beautiful snippets
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 " Default snippets library
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 " Supertab for awesome tabbing
-Plugin 'ervandew/supertab'
+Plug 'ervandew/supertab'
 " Helps with surrounding text
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 " html generator
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 " Improved PHP omni-completions
-Plugin 'shawncplus/phpcomplete.vim'
+Plug 'shawncplus/phpcomplete.vim'
 " Better php syntax highlighting
-Plugin 'StanAngeloff/php.vim'
+Plug 'StanAngeloff/php.vim'
 " Better Markdown Highlighting
-Plugin 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 " Better c++ highlighting
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight'
 " Better yaml highlighting
-Plugin 'stephpy/vim-yaml'
+Plug 'stephpy/vim-yaml'
 " Better python highlighting
-Plugin 'hdima/python-syntax'
+Plug 'hdima/python-syntax'
 " PEP 8 checking
-Plugin 'vim-scripts/pep8'
+Plug 'vim-scripts/pep8'
 " Python documention in vim
-Plugin 'fs111/pydoc.vim'
+Plug 'fs111/pydoc.vim'
 " Lines up code awesome
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 " Loads encrypted files by asking for password
-Plugin 'jamessan/vim-gnupg'
+Plug 'jamessan/vim-gnupg'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -63,6 +63,52 @@ call plug#end()
 "-----------------------------------------------------------------------------------------------------------------------
 " User Preferences
 "-----------------------------------------------------------------------------------------------------------------------
+" Set map leader
+let mapleader="\\"
+" Expand tabs into spaces
+set expandtab 
+" Number of space that tab counts for
+set tabstop=2
+" Number of spaces for each autoindent
+set shiftwidth=2 
+" Maximium width of text that is being inserted. 0 disables it
+set textwidth=0 
+" Set history of : commands
+set history=1000 
+" Copy the indentation from the previous line
+set autoindent 
+" Show line numbers
+set number 
+" Turn off TextWrapping
+set nowrap 
+" Autocomplete options
+set completeopt=longest,menuone 
+" Completion mode for wildchar
+set wildmode=longest,list 
+" Backspace over everything in insert mode
+set backspace=indent,eol,start 
+" Show the status bar always
+set laststatus=2 
+" Ignore useless files
+set wildignore=*/app/cache,*/vendor,*/env,*.pyc 
+" Highlighting in vim leaves your cursor wherever you ended at
+:vmap y ygv<ESC> 
+" Stops flashing from command above and helps save on processing
+set lazyredraw
+" Vim diff commands
+nnoremap <leader>du :diffupdate<CR>
+nnoremap <leader>dd :diffget<CR>
+nnoremap <leader>df :diffput<CR>
+nnoremap - [c
+nnoremap = ]c
+" File ident on xml files
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+" Formating a json file
+com! Formatjson %!python -m json.tool
+" Search for word under cursor
+nmap * yiw/<C-r>0
+" Command for figuring out highlight group
+map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 " Get out of visual mode faset 
 imap jj <ESC>
 " Faster saving
@@ -71,8 +117,14 @@ noremap <Leader>w :update<CR>
 noremap <Leader>q :quit<CR>
 " Visually select pasted text
 nnoremap gp `[v`]
-" Use the clipboard
-set clipboard+=unnamedplus
+" Indent options
+autocmd FileType python set tabstop=4|set shiftwidth=4
+autocmd FileType php set tabstop=4|set shiftwidth=4
+autocmd FileType htmljinja set tabstop=2|set shiftwidth=2
+autocmd FileType sh set tabstop=2|set shiftwidth=2
+autocmd FileType css set tabstop=2|set shiftwidth=2
+" Yank withouth newline
+nmap yY ^y$
 " Switch panes no matter what the buffer
 :tnoremap <A-h> <C-\><C-n><C-w>h
 :tnoremap <A-j> <C-\><C-n><C-w>j
@@ -82,6 +134,231 @@ set clipboard+=unnamedplus
 :nnoremap <A-j> <C-w>j
 :nnoremap <A-k> <C-w>k
 :nnoremap <A-l> <C-w>l
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Color/Theming Options
+"-----------------------------------------------------------------------------------------------------------------------
+" Solarized cterm colors
+" 0 = almost dark blue // 1 = red
+" 2 = green // 3 = yellow
+" 4 = light blue // 5 = pink
+" 6 = cyan // 7 = beige
+" 8 = dark blue // 9 = orange
+" 10 = dark grey // 11 = grey
+" 12 = light grey // 13 = purple
+" 14 = grey // 15 = white
+" 16 = black
+"
+" Highlight for searching (Light Background)
+"hi Search guibg=Green guifg=Black
+"hi Search cterm=NONE ctermfg=Black ctermbg=Green
+" Highlight for searching (Dark Background)
+"hi Search guibg=White guifg=Red
+"hi Search cterm=NONE ctermfg=Red ctermbg=White
+"
+"Colorscheme
+let g:solarized_termtrans=1
+set background=dark
+colorscheme solarized
+" Vim diff Colors
+highlight DiffAdd    cterm=NONE ctermfg=0 ctermbg=2 
+highlight DiffDelete cterm=NONE ctermfg=0 ctermbg=1
+highlight DiffChange cterm=NONE ctermfg=0 ctermbg=6
+highlight DiffText   cterm=NONE ctermfg=0 ctermbg=6
+" Highligh current cursorline
+hi CursorLineNR cterm=bold ctermfg=226
+" Status line options
+set statusline=
+set statusline+=%1*\ %02c\                    "Colnr
+set statusline+=%2*\ »                        "RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+set statusline+=%3*\ %<%F\                    "File+path
+set statusline+=%2*\«
+set statusline+=%2*\ %=\ %l/%L\ (%02p%%)\             "Rownumber/total (%)
+" Status line colors  per mode 
+hi User1 ctermfg=226  ctermbg=8 cterm=bold
+hi User3 ctermfg=4  ctermbg=0
+hi User2 ctermfg=6  ctermbg=0
+" Twig Syntax
+au BufRead,BufNewFile *.twig set filetype=htmljinja
+au BufRead,BufNewFile *.html set filetype=htmljinja
+" Yaml Sytnax
+au BufNewFile,BufRead *.yml set filetype=yaml
+au BufNewFile,BufRead *.sls set filetype=yaml
+" Drupal Syntax
+au BufNewFile,BufRead *.inc set filetype=php
+au BufNewFile,BufRead *.module set filetype=php
+"-----------------------------------------------------------------------------------------------------------------------
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Backup Directories
+set backupdir-=.
+set backupdir+=.
+set backupdir-=~/
+set backupdir^=~/.vim/vim-files/backups/
+set backup
+set directory=~/.vim/vim-files/swaps/
+"-----------------------------------------------------------------------------------------------------------------------
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Nerdtree Plugin
+"-----------------------------------------------------------------------------------------------------------------------
+let NERDTreeShowLineNumbers=1
+nnoremap <leader>n :NERDTreeTabsToggle<CR>
+let NERDTreeDirArrows=0
+let NERDTreeMapOpenSplit = 's'
+let NERDTreeMapOpenVSplit = 'v'
+let NERDTreeWinSize = 40
+let NERDTreeIgnore = ['\.pyc$']
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Emmet Plugin
+"-----------------------------------------------------------------------------------------------------------------------
+let g:use_emmet_complete_tag = 1
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Indent Lines Plugin
+"-----------------------------------------------------------------------------------------------------------------------
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_exclude_filetypes =['help', 'nerdtree']
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+" Indent Lines light background
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=7
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=7
+" Indent Line dark background
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Easymotion Plugin
+"-----------------------------------------------------------------------------------------------------------------------
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionTarget2First ErrorMsg
+hi link EasyMotionTarget2Second ErrorMsg
+hi link EasyMotionShade Comment
+hi EasyMotionTarget ctermbg=none ctermfg=1 cterm=bold
+"let g:EasyMotion_do_shade = 0
+nnoremap \ <NOP>
+map <Leader> <Plug>(easymotion-prefix)
+map <Leader>r <Plug>(easymotion-repeat)
+nmap s <Plug>(easymotion-repeat)
+let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+"-----------------------------------------------------------------------------------------------------------------------
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Vdebug Plugin
+"-----------------------------------------------------------------------------------------------------------------------
+let g:vdebug_options = {
+\    "watch_window_style" : 'compact',
+\    "port" : 9000,
+\    "path_maps" : {"/vagrant": "/Users/codyhiar/Sites"},
+\}
+"Delete all breakpoints
+:command! BR BreakpointRemove *
+"-----------------------------------------------------------------------------------------------------------------------
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Unite Plugin
+"-----------------------------------------------------------------------------------------------------------------------
+let g:unite_enable_start_insert = 1
+let g:unite_split_rule = "botright"
+let g:unite_force_overwrite_statusline = 0
+let g:unite_winheight = 10
+let g:unite_source_history_yank_enable = 1
+let g:unite_source_rec_max_cache_files=5000
+" Check to see if the plugin is loaded before callinging
+if exists('g:loaded_unite')
+    call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
+          \ 'ignore_pattern', join([
+          \ '\.git/',
+          \ ], '\|'))
+    call unite#filters#matcher_default#use(['matcher_fuzzy'])
+    call unite#filters#sorter_default#use(['sorter_rank'])
+endif
+
+nnoremap <space>s :<C-u>Unite -buffer-name=buffer buffer -winheight=40<cr>
+nnoremap <space>y :<C-u>Unite -buffer-name=yank history/yank -winheight=40<cr>
+" Custom mappings for the unite buffer
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+  " Enable navigation with control-j and control-k in insert mode
+  let b:SuperTabDisabled=1
+  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+  imap <silent><buffer><expr> <C-x> unite#do_action('split')
+  imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+  imap <silent><buffer><expr> <C-t> unite#do_action('tabopen')
+endfunction
+"-----------------------------------------------------------------------------------------------------------------------
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" SuperTab Plugin
+"-----------------------------------------------------------------------------------------------------------------------
+let g:SuperTabMappingForward = '<tab>'
+let g:SuperTabMappingBackward = '<s-tab>'
+let g:SuperTabLongestHighlight = 0
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+"au FileType python set omnifunc=pythoncomplete#Complete
+"-----------------------------------------------------------------------------------------------------------------------
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Ultisnips
+"-----------------------------------------------------------------------------------------------------------------------
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsListSnippets="<c-x>"
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-l>"
+:command! SNIPS tabnew ~/.vim/bundle/vim-snippets/snippets
+"-----------------------------------------------------------------------------------------------------------------------
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Unite Tag
+"-----------------------------------------------------------------------------------------------------------------------
+autocmd BufEnter *
+\   if empty(&buftype)
+\|      nnoremap <buffer> <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
+\|  endif
+let g:unite_source_tag_max_name_length = 80
+let g:unite_source_tag_max_fname_length = 80
+"-----------------------------------------------------------------------------------------------------------------------
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Fugtive 
+"-----------------------------------------------------------------------------------------------------------------------
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gl :Glog<CR>
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Python-Syntax 
+"-----------------------------------------------------------------------------------------------------------------------
+let python_highlight_all = 1
 
 
 
@@ -113,3 +390,16 @@ endf
 hi CtrlP_Purple  ctermfg=7 ctermbg=4
 hi CtrlP_IPurple ctermfg=4  ctermbg=7
 hi CtrlP_Violet  ctermfg=4  ctermbg=8
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" PEP8 Plugin
+"-----------------------------------------------------------------------------------------------------------------------
+let g:pep8_map='<F9>'
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Markdown
+"-----------------------------------------------------------------------------------------------------------------------
+let g:vim_markdown_folding_disabled=1

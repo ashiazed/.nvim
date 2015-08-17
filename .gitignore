@@ -1,1 +1,5 @@
 plugged
+!nvim-files/backups/.gitkeep
+nvim-files/backups
+nvim-files/swaps
+!nvim-files/swaps/.gitkeep
