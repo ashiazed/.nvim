@@ -407,3 +407,19 @@ let g:pep8_map='<F9>'
 " Markdown
 "-----------------------------------------------------------------------------------------------------------------------
 let g:vim_markdown_folding_disabled=1
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" OSX Save to keyboard
+"-----------------------------------------------------------------------------------------------------------------------
+function! ClipboardYank()
+  call system('pbcopy', @@)
+endfunction
+function! ClipboardPaste()
+  let @@ = system('pbpaste')
+endfunction
+
+vnoremap <silent> y y:call ClipboardYank()<cr>
+vnoremap <silent> d d:call ClipboardYank()<cr>
+nnoremap <silent> p :call ClipboardPaste()<cr>p
