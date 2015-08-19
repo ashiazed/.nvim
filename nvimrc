@@ -123,7 +123,7 @@ noremap <Leader>q :quit<CR>
 nnoremap gp `[v`]
 " Indent options
 autocmd FileType python set tabstop=4|set shiftwidth=4
-autocmd FileType php set tabstop=4|set shiftwidth=4
+autocmd FileType php set tabstop=2|set shiftwidth=2
 autocmd FileType htmljinja set tabstop=2|set shiftwidth=2
 autocmd FileType sh set tabstop=2|set shiftwidth=2
 autocmd FileType css set tabstop=2|set shiftwidth=2
@@ -407,19 +407,3 @@ let g:pep8_map='<F9>'
 " Markdown
 "-----------------------------------------------------------------------------------------------------------------------
 let g:vim_markdown_folding_disabled=1
-
-
-
-"-----------------------------------------------------------------------------------------------------------------------
-" OSX Save to keyboard
-"-----------------------------------------------------------------------------------------------------------------------
-function! ClipboardYank()
-  call system('pbcopy', @@)
-endfunction
-function! ClipboardPaste()
-  let @@ = system('pbpaste')
-endfunction
-
-vnoremap <silent> y y:call ClipboardYank()<cr>
-vnoremap <silent> d d:call ClipboardYank()<cr>
-nnoremap <silent> p :call ClipboardPaste()<cr>p
