@@ -99,6 +99,9 @@ set wildignore=*/app/cache,*/vendor,*/env,*.pyc
 :vmap y ygv<ESC> 
 " Stops flashing from command above and helps save on processing
 set lazyredraw
+" Set Window splits
+set splitright
+set splitbelow
 " Vim diff commands
 nnoremap <leader>du :diffupdate<CR>
 nnoremap <leader>dd :diffget<CR>
