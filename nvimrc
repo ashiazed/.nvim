@@ -102,6 +102,8 @@ set lazyredraw
 " Set Window splits
 set splitright
 set splitbelow
+" Use the system clipboard for copy/pasting
+set clipboard+=unnamedplus
 " Vim diff commands
 nnoremap <leader>du :diffupdate<CR>
 nnoremap <leader>dd :diffget<CR>
