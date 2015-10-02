@@ -219,6 +219,7 @@ set directory=~/.vim/vim-files/swaps/
 "-----------------------------------------------------------------------------------------------------------------------
 let NERDTreeShowLineNumbers=1
 nnoremap <leader>n :NERDTreeTabsToggle<CR>
+nnoremap <leader>m :NERDTreeFind<CR>
 let NERDTreeDirArrows=0
 let NERDTreeMapOpenSplit = 's'
 let NERDTreeMapOpenVSplit = 'v'
@@ -339,19 +340,6 @@ let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 :command! SNIPS tabnew ~/.vim/bundle/vim-snippets/snippets
-"-----------------------------------------------------------------------------------------------------------------------
-
-
-
-"-----------------------------------------------------------------------------------------------------------------------
-" Unite Tag
-"-----------------------------------------------------------------------------------------------------------------------
-autocmd BufEnter *
-\   if empty(&buftype)
-\|      nnoremap <buffer> <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
-\|  endif
-let g:unite_source_tag_max_name_length = 80
-let g:unite_source_tag_max_fname_length = 80
 "-----------------------------------------------------------------------------------------------------------------------
 
 
