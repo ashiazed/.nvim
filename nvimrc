@@ -207,9 +207,9 @@ au BufNewFile,BufRead *.module set filetype=php
 set backupdir-=.
 set backupdir+=.
 set backupdir-=~/
-set backupdir^=~/.vim/vim-files/backups/
+set backupdir^=~/.nvim/nvim-files/backups/
 set backup
-set directory=~/.vim/vim-files/swaps/
+set directory=~/.nvim/nvim-files/swaps/
 "-----------------------------------------------------------------------------------------------------------------------
 
 
@@ -272,11 +272,12 @@ map  N <Plug>(easymotion-prev)
 
 "-----------------------------------------------------------------------------------------------------------------------
 " Vdebug Plugin
+"\    "path_maps" : {"/vagrant": "/Users/codyhiar/Sites"},
 "-----------------------------------------------------------------------------------------------------------------------
 let g:vdebug_options = {
 \    "watch_window_style" : 'compact',
 \    "port" : 9000,
-\    "path_maps" : {"/vagrant": "/Users/codyhiar/Sites"},
+\    "path_maps" : {"/ask/sites/investopedia.com/code/web": "/Users/hiarc/Sites/investopedia.com"},
 \}
 "Delete all breakpoints
 :command! BR BreakpointRemove *
