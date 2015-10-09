@@ -346,7 +346,7 @@ let g:UltiSnipsListSnippets="<c-x>"
 let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-l>"
-:command! SNIPS tabnew ~/.nvim/bundle/vim-snippets/snippets
+:command! SNIPS tabnew ~/.nvim/plugged/vim-snippets/snippets
 "-----------------------------------------------------------------------------------------------------------------------
 
 
