@@ -55,6 +55,8 @@ Plug 'fs111/pydoc.vim'
 Plug 'godlygeek/tabular'
 " Loads encrypted files by asking for password
 Plug 'jamessan/vim-gnupg'
+" Rename Tabs
+Plug 'gcmt/taboo.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -81,6 +83,10 @@ set textwidth=0
 set history=1000 
 " Copy the indentation from the previous line
 set autoindent 
+" Get ammount of indent according to C indent rules
+set cindent
+" Make sure indenting works
+filetype plugin indent on
 " Show line numbers
 set number 
 " Turn off TextWrapping
@@ -340,7 +346,7 @@ let g:UltiSnipsListSnippets="<c-x>"
 let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-l>"
-:command! SNIPS tabnew ~/.vim/bundle/vim-snippets/snippets
+:command! SNIPS tabnew ~/.nvim/bundle/vim-snippets/snippets
 "-----------------------------------------------------------------------------------------------------------------------
 
 
