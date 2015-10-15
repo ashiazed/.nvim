@@ -149,6 +149,8 @@ nmap yY ^y$
 :nnoremap <A-j> <C-w>j
 :nnoremap <A-k> <C-w>k
 :nnoremap <A-l> <C-w>l
+" Create a new tab
+nnoremap <C-w>t :tabnew<CR>
 
 
 
