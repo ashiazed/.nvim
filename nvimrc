@@ -57,6 +57,8 @@ Plug 'godlygeek/tabular'
 Plug 'jamessan/vim-gnupg'
 " Rename Tabs
 Plug 'gcmt/taboo.vim'
+" Dev icons
+Plug 'ryanoasis/vim-devicons'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -233,6 +235,9 @@ let NERDTreeMapOpenSplit = 's'
 let NERDTreeMapOpenVSplit = 'v'
 let NERDTreeWinSize = 40
 let NERDTreeIgnore = ['\.pyc$']
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 
 "-----------------------------------------------------------------------------------------------------------------------
@@ -409,3 +414,14 @@ let g:pep8_map='<F9>'
 " Markdown
 "-----------------------------------------------------------------------------------------------------------------------
 let g:vim_markdown_folding_disabled=1
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Dev-icons
+"-----------------------------------------------------------------------------------------------------------------------
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable = 1
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
