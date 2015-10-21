@@ -317,7 +317,7 @@ if exists('g:loaded_unite')
 endif
 
 nnoremap <space>s :<C-u>Unite -buffer-name=buffer buffer -winheight=40<cr>
-nnoremap <space>y :<C-u>Unite -buffer-name=yank history/yank -winheight=40<cr>
+nnoremap <space>y :<C-u>Unite -buffer-name=yank history/yank -quick-match -max-multi-lines=1 -winheight=40<cr>
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
