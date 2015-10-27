@@ -59,7 +59,10 @@ Plug 'jamessan/vim-gnupg'
 Plug 'gcmt/taboo.vim'
 " Dev icons
 Plug 'ryanoasis/vim-devicons'
-
+" Dash Functionality
+Plug 'rizzatti/dash.vim'
+" Markers appear on side
+Plug 'kshenoy/vim-signature'
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -208,6 +211,8 @@ au BufNewFile,BufRead *.sls set filetype=yaml
 " Drupal Syntax
 au BufNewFile,BufRead *.inc set filetype=php
 au BufNewFile,BufRead *.module set filetype=php
+" Change gutter color
+highlight SignColumn cterm=NONE ctermfg=0 ctermbg=8
 "-----------------------------------------------------------------------------------------------------------------------
 
 
@@ -425,3 +430,10 @@ let g:webdevicons_enable = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Dev-icons
+"-----------------------------------------------------------------------------------------------------------------------
+nnoremap K :Dash<CR>
