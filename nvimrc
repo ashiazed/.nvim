@@ -290,7 +290,7 @@ map  N <Plug>(easymotion-prev)
 
 "-----------------------------------------------------------------------------------------------------------------------
 " Vdebug Plugin
-"\    "path_maps" : {"/vagrant": "/Users/codyhiar/Sites"},
+"\    "path_maps" : {"/vagrant": "/Users/codyhiar/Sites"}
 "-----------------------------------------------------------------------------------------------------------------------
 let g:vdebug_options = {
 \    "watch_window_style" : 'compact',
