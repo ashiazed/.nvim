@@ -290,12 +290,15 @@ map  N <Plug>(easymotion-prev)
 
 "-----------------------------------------------------------------------------------------------------------------------
 " Vdebug Plugin
-"\    "path_maps" : {"/vagrant": "/Users/codyhiar/Sites"}
 "-----------------------------------------------------------------------------------------------------------------------
 let g:vdebug_options = {
 \    "watch_window_style" : 'compact',
 \    "port" : 9000,
-\    "path_maps" : {"/ask/sites/investopedia.com/code/web": "/Users/hiarc/Sites/investopedia.com"},
+\    "path_maps" : {
+\         "/vagran": "/Users/codyhiar/Sites",
+\         "/var/www/html": "/Users/hiarc/Sites/redis-api",
+\         "/ask/sites/investopedia.com/code/web": "/Users/hiarc/Sites/investopedia.com"
+\     },
 \}
 "Delete all breakpoints
 :command! BR BreakpointRemove *
