@@ -4,7 +4,7 @@
 call plug#begin('~/.nvim/plugged')
 
 " Faster navigation through files
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 " Creates indent lines, makes code a bit easier to read
 Plug 'nathanaelkane/vim-indent-guides' 
 " Nerdtree file explorer
