@@ -63,6 +63,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'rizzatti/dash.vim'
 " Markers appear on side
 Plug 'kshenoy/vim-signature'
+" Haskell plugins
+Plug 'dag/vim2hs'
 " Add plugins to &runtimepath
 call plug#end()
 
