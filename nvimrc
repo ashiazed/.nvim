@@ -83,7 +83,7 @@ set expandtab
 " Number of space that tab counts for
 set tabstop=2
 " Number of spaces for each autoindent
-set shiftwidth=2 
+set shiftwidth=2
 " Maximium width of text that is being inserted. 0 disables it
 set textwidth=0 
 " Set history of : commands
@@ -117,6 +117,8 @@ set splitright
 set splitbelow
 " Use the system clipboard for copy/pasting
 set clipboard+=unnamedplus
+" Disable Folding, don't really use it
+set nofoldenable
 " Vim diff commands
 nnoremap <leader>du :diffupdate<CR>
 nnoremap <leader>dd :diffget<CR>
