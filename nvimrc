@@ -145,6 +145,7 @@ autocmd FileType php set tabstop=2|set shiftwidth=2
 autocmd FileType htmljinja set tabstop=2|set shiftwidth=2
 autocmd FileType sh set tabstop=2|set shiftwidth=2
 autocmd FileType css set tabstop=2|set shiftwidth=2
+autocmd FileType hs set tabstop=8|set shiftwidth=8
 " Yank withouth newline
 nmap yY ^y$
 " Switch panes no matter what the buffer
