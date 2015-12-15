@@ -1,14 +1,14 @@
 "-----------------------------------------------------------------------------------------------------------------------
 " Plugins
 "-----------------------------------------------------------------------------------------------------------------------
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Faster navigation through files
 Plug 'ctrlpvim/ctrlp.vim'
 " Creates indent lines, makes code a bit easier to read
 Plug 'nathanaelkane/vim-indent-guides' 
-" Nerdtree file explorer
-Plug 'scrooloose/nerdtree'   
+" Nerdtree file explorer, 4.2 for issue with devicons bug
+Plug 'scrooloose/nerdtree', { 'tag': '5.0.0' }
 " Keep Nerdtree open across tabs
 Plug 'jistr/vim-nerdtree-tabs'   
 " Better commenting commands
@@ -81,9 +81,9 @@ let mapleader="\\"
 " Expand tabs into spaces
 set expandtab 
 " Number of space that tab counts for
-set tabstop=2
+set tabstop=4
 " Number of spaces for each autoindent
-set shiftwidth=2
+set shiftwidth=4
 " Maximium width of text that is being inserted. 0 disables it
 set textwidth=0 
 " Set history of : commands
@@ -143,7 +143,6 @@ noremap <Leader>q :quit<CR>
 nnoremap gp `[v`]
 " Indent options
 autocmd FileType python set tabstop=4|set shiftwidth=4
-autocmd FileType php set tabstop=2|set shiftwidth=2
 autocmd FileType htmljinja set tabstop=2|set shiftwidth=2
 autocmd FileType sh set tabstop=2|set shiftwidth=2
 autocmd FileType css set tabstop=2|set shiftwidth=2
@@ -227,9 +226,9 @@ highlight SignColumn cterm=NONE ctermfg=0 ctermbg=8
 set backupdir-=.
 set backupdir+=.
 set backupdir-=~/
-set backupdir^=~/.nvim/nvim-files/backups/
+set backupdir^=~/.config/nvim/nvim-files/backups/
 set backup
-set directory=~/.nvim/nvim-files/swaps/
+set directory=~/.config/nvim/nvim-files/swaps/
 "-----------------------------------------------------------------------------------------------------------------------
 
 
@@ -300,9 +299,9 @@ let g:vdebug_options = {
 \    "watch_window_style" : 'compact',
 \    "port" : 9000,
 \    "path_maps" : {
-\         "/vagran": "/Users/codyhiar/Sites",
-\         "/var/www/html": "/Users/hiarc/Sites/redis-api",
-\         "/ask/sites/investopedia.com/code/web": "/Users/hiarc/Sites/investopedia.com"
+\         "/vagrant": "/Users/codyhiar/Sites",
+\         "/var/www/html": "/Users/hiarc/Sites/inv/redis-api",
+\         "/ask/sites/investopedia.com/code/web": "/Users/hiarc/Sites/inv/investopedia.com"
 \     },
 \}
 "Delete all breakpoints
