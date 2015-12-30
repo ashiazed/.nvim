@@ -25,6 +25,8 @@ Plug 'joonty/vdebug'
 Plug 'Lokaltog/vim-easymotion'
 " Provides yank history and buffer switching
 Plug 'Shougo/unite.vim'
+" Provides yank history for unite
+Plug 'Shougo/neoyank.vim'
 " Snippets, beautiful snippets
 Plug 'SirVer/ultisnips'
 " Default snippets library
