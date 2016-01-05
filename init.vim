@@ -373,10 +373,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 
 
 "-----------------------------------------------------------------------------------------------------------------------
-" Fugtive 
+" Fugitive 
 "-----------------------------------------------------------------------------------------------------------------------
 nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gc :Gcommit --verbose<CR>
 nnoremap <leader>gl :Glog<CR>
 
 
