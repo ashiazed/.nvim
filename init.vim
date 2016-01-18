@@ -303,7 +303,7 @@ let g:vdebug_options = {
 \    "path_maps" : {
 \         "/vagrant": "/Users/codyhiar/Sites",
 \         "/var/www/html": "/Users/hiarc/Sites/inv/redis-api",
-\         "/ask/sites/investopedia.com/code/web": "/Users/hiarc/Sites/inv/investopedia.com"
+\         "/ask/sites/investopedia.com/code/web": "/Users/hiarc/Sites/inv/www"
 \     },
 \}
 "Delete all breakpoints
