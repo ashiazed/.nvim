@@ -377,6 +377,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 "-----------------------------------------------------------------------------------------------------------------------
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit --verbose<CR>
+nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gl :Glog<CR>
 
 
