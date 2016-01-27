@@ -21,8 +21,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/syntastic'
 " Vdebug, essential for php code
 Plug 'joonty/vdebug'
-" Easymotion, easier moving around current buffer
-Plug 'Lokaltog/vim-easymotion'
 " Provides yank history and buffer switching
 Plug 'Shougo/unite.vim'
 " Provides yank history for unite
@@ -162,6 +160,16 @@ nmap yY ^y$
 :nnoremap <A-l> <C-w>l
 " Create a new tab
 nnoremap <C-w>t :tabnew<CR>
+" Move cursor to matched string
+set incsearch
+" Turn off highlight search
+set hlsearch!
+" allows incsearch highlighting for range commands
+cnoremap $t <CR>:t''<CR>
+cnoremap $T <CR>:T''<CR>
+cnoremap $m <CR>:m''<CR>
+cnoremap $M <CR>:M''<CR>
+cnoremap $d <CR>:d<CR>``
 
 
 
@@ -271,27 +279,6 @@ let g:indent_guides_guide_size = 1
 " Indent Line dark background
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
-
-
-"-----------------------------------------------------------------------------------------------------------------------
-" Easymotion Plugin
-"-----------------------------------------------------------------------------------------------------------------------
-hi link EasyMotionTarget ErrorMsg
-hi link EasyMotionTarget2First ErrorMsg
-hi link EasyMotionTarget2Second ErrorMsg
-hi link EasyMotionShade Comment
-hi EasyMotionTarget ctermbg=none ctermfg=1 cterm=bold
-"let g:EasyMotion_do_shade = 0
-nnoremap \ <NOP>
-map <Leader> <Plug>(easymotion-prefix)
-map <Leader>r <Plug>(easymotion-repeat)
-nmap s <Plug>(easymotion-repeat)
-let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
-"-----------------------------------------------------------------------------------------------------------------------
 
 
 "-----------------------------------------------------------------------------------------------------------------------
