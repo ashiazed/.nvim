@@ -362,10 +362,18 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 "-----------------------------------------------------------------------------------------------------------------------
 " Fugitive 
 "-----------------------------------------------------------------------------------------------------------------------
-nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit --verbose<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gl :Glog<CR>
+function! ToggleGStatus()
+  if buflisted(bufname('.git/index'))
+    bd .git/index
+  else
+    Gstatus
+  endif
+endfunction
+command ToggleGStatus :call ToggleGStatus()
+nnoremap <leader>gs :ToggleGStatus<CR>
 
 
 "-----------------------------------------------------------------------------------------------------------------------
