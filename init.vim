@@ -8,7 +8,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Creates indent lines, makes code a bit easier to read
 Plug 'nathanaelkane/vim-indent-guides' 
 " Nerdtree file explorer, 4.2 for issue with devicons bug
-Plug 'scrooloose/nerdtree', { 'tag': '5.0.0' }
+Plug 'scrooloose/nerdtree', { 'tag': '4.2.0' }
 " Keep Nerdtree open across tabs
 Plug 'jistr/vim-nerdtree-tabs'   
 " Better commenting commands
