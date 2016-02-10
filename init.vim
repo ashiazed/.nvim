@@ -132,9 +132,9 @@ com! Formatjson %!python -m json.tool
 " Command for figuring out highlight group
 map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 " Faster saving
-noremap <Leader>w :update<CR>
+noremap <leader>w :update<CR>
 " Faster quiting
-noremap <Leader>q :quit<CR>
+noremap <leader>q :quit!<CR>
 " Visually select pasted text
 nnoremap gp `[v`]
 " Indent options
@@ -350,7 +350,7 @@ let g:UltiSnipsListSnippets="<c-x>"
 let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-l>"
-:command! SNIPS tabnew ~/.nvim/plugged/vim-snippets/snippets
+:command! SNIPS tabnew ~/.config/nvim/plugged/vim-snippets/snippets
 "-----------------------------------------------------------------------------------------------------------------------
 
 
