@@ -361,6 +361,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 nnoremap <leader>gc :Gcommit --verbose<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gb :Gblame<CR>
 function! ToggleGStatus()
   if buflisted(bufname('.git/index'))
     bd .git/index
