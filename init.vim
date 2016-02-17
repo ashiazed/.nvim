@@ -162,9 +162,9 @@ set incsearch
 set hlsearch!
 " allows incsearch highlighting for range commands
 cnoremap $t <CR>:t''<CR>
-cnoremap $T <CR>:T''<CR>
+cnoremap $T <CR>:t''<CR>ddkP
 cnoremap $m <CR>:m''<CR>
-cnoremap $M <CR>:M''<CR>
+cnoremap $M <CR>:m''<CR>ddkP
 cnoremap $d <CR>:d<CR>``
 
 
