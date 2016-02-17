@@ -128,7 +128,7 @@ function! plug#begin(...)
 endfunction
 
 function! s:define_commands()
-  command! -nargs=+ -bar Plug call s:add(<args>)
+  command! -nargs=+ -bar Plug call s:Plug(<args>)
   if !executable('git')
     return s:err('`git` executable not found. Most commands will not be available. To suppress this message, prepend `silent!` to `call plug#begin(...)`.')
   endif
@@ -411,7 +411,7 @@ function! s:remove_triggers(name)
   call remove(s:triggers, a:name)
 endfunction
 
-function! s:lod(names, types)
+function! s:lod(names, types, ...)
   for name in a:names
     call s:remove_triggers(name)
     let s:loaded[name] = 1
@@ -423,6 +423,9 @@ function! s:lod(names, types)
     for dir in a:types
       call s:source(rtp, dir.'/**/*.vim')
     endfor
+    for file in a:000
+      call s:source(rtp, file)
+    endfor
     if exists('#User#'.name)
       execute 'doautocmd User' name
     endif
@@ -430,7 +433,8 @@ function! s:lod(names, types)
 endfunction
 
 function! s:lod_ft(pat, names)
-  call s:lod(a:names, ['plugin', 'after/plugin', 'syntax', 'after/syntax'])
+  let syn = 'syntax/'.a:pat.'.vim'
+  call s:lod(a:names, ['plugin', 'after/plugin'], syn, 'after/'.syn)
   execute 'autocmd! PlugLOD FileType' a:pat
   if exists('#filetypeplugin#FileType')
     doautocmd filetypeplugin FileType
@@ -458,7 +462,7 @@ function! s:lod_map(map, names, prefix)
   call feedkeys(a:prefix . substitute(a:map, '^<Plug>', "\<Plug>", '') . extra)
 endfunction
 
-function! s:add(repo, ...)
+function! s:Plug(repo, ...)
   if a:0 > 1
     return s:err('Invalid number of arguments (1..2)')
   endif
@@ -1152,6 +1156,7 @@ class Buffer(object):
   def __init__(self, lock, num_plugs, is_pull):
     self.bar = ''
     self.event = 'Updating' if is_pull else 'Installing'
+    self.firstTime = True
     self.lock = lock
     self.maxy = int(vim.eval('winheight(".")'))
     self.num_plugs = num_plugs
@@ -1201,7 +1206,12 @@ class Buffer(object):
           lnum = 3
       else:
         lnum = 3
-      curbuf.append(msg, lnum)
+      if self.firstTime:
+        curbuf.append("", lnum-1)
+        curbuf.append(msg, lnum-1)
+        self.firstTime = False
+      else:
+        curbuf.append(msg, lnum)
 
       self.header()
     except vim.error:
