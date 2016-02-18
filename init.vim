@@ -65,6 +65,8 @@ Plug 'rizzatti/dash.vim'
 Plug 'kshenoy/vim-signature'
 " Haskell plugins
 Plug 'dag/vim2hs'
+" Ack Plugin
+Plug 'mileszs/ack.vim'
 " Add plugins to &runtimepath
 call plug#end()
 
