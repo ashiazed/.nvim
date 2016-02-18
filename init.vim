@@ -161,11 +161,11 @@ set incsearch
 " Turn off highlight search
 set hlsearch!
 " allows incsearch highlighting for range commands
-cnoremap $t <CR>:t''<CR>
-cnoremap $T <CR>:t''<CR>ddkP
-cnoremap $m <CR>:m''<CR>
-cnoremap $M <CR>:m''<CR>ddkP
-cnoremap $d <CR>:d<CR>``
+cnoremap <leader>t <CR>:t''<CR>
+cnoremap <leader>T <CR>:t''<CR>ddkP
+cnoremap <leader>m <CR>:m''<CR>
+cnoremap <leader>M <CR>:m''<CR>ddkP
+cnoremap <leader>d <CR>:d<CR>``
 
 
 
