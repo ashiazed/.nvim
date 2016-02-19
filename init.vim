@@ -67,6 +67,8 @@ Plug 'kshenoy/vim-signature'
 Plug 'dag/vim2hs'
 " Ack Plugin
 Plug 'mileszs/ack.vim'
+" Dark powered asynchronous completion
+Plug 'Shougo/deoplete.nvim'
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -441,3 +443,10 @@ let g:DevIconsEnableFoldersOpenClose = 1
 " Dev-icons
 "-----------------------------------------------------------------------------------------------------------------------
 nnoremap K :Dash<CR>
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Deoplete
+"-----------------------------------------------------------------------------------------------------------------------
+let g:deoplete#enable_at_startup = 1
