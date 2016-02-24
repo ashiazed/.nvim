@@ -465,5 +465,4 @@ autocmd! BufWritePost * Neomake
 "-----------------------------------------------------------------------------------------------------------------------
 " CamelCaseMotion
 "-----------------------------------------------------------------------------------------------------------------------
-call camelcasemotion#CreateMotionMappings('<leader>')
-
+call camelcasemotion#CreateMotionMappings(',')
