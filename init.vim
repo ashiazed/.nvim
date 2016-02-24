@@ -18,7 +18,7 @@ Plug 'tpope/vim-fugitive'
 " Multiple cursors
 Plug 'terryma/vim-multiple-cursors'
 " Syntax Checker
-Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake'
 " Vdebug, essential for php code
 Plug 'joonty/vdebug'
 " Provides yank history and buffer switching
@@ -170,7 +170,8 @@ cnoremap <leader>T <CR>:t''<CR>ddkP
 cnoremap <leader>m <CR>:m''<CR>
 cnoremap <leader>M <CR>:m''<CR>ddkP
 cnoremap <leader>d <CR>:d<CR>``
-
+" Use the enter key to insert tab completions
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
 "-----------------------------------------------------------------------------------------------------------------------
@@ -341,7 +342,6 @@ let g:SuperTabMappingForward = '<tab>'
 let g:SuperTabMappingBackward = '<s-tab>'
 let g:SuperTabLongestHighlight = 0
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-"au FileType python set omnifunc=pythoncomplete#Complete
 "-----------------------------------------------------------------------------------------------------------------------
 
 
@@ -350,8 +350,8 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 " Ultisnips
 "-----------------------------------------------------------------------------------------------------------------------
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsListSnippets="<c-x>"
-let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<c-s>"
+let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-l>"
 :command! SNIPS tabnew ~/.config/nvim/plugged/vim-snippets/snippets
@@ -450,3 +450,10 @@ nnoremap K :Dash<CR>
 " Deoplete
 "-----------------------------------------------------------------------------------------------------------------------
 let g:deoplete#enable_at_startup = 1
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Neomake
+"-----------------------------------------------------------------------------------------------------------------------
+autocmd! BufWritePost * Neomake
