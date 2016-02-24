@@ -5,3 +5,6 @@ autocmd BufWritePost * match nbsp "[\xc2\xa0]"
 
 autocmd BufWritePost * highlight trailing_spaces ctermbg=Red
 autocmd BufWritePost * match trailing_spaces /\s\+$/
+
+autocmd cursormoved * match nbsp ""
+autocmd cursormoved * match trailing_spaces ""
