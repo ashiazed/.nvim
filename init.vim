@@ -69,6 +69,8 @@ Plug 'dag/vim2hs'
 Plug 'mileszs/ack.vim'
 " Dark powered asynchronous completion
 Plug 'Shougo/deoplete.nvim'
+" Camel Case based motions
+Plug 'bkad/CamelCaseMotion'
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -457,3 +459,11 @@ let g:deoplete#enable_at_startup = 1
 " Neomake
 "-----------------------------------------------------------------------------------------------------------------------
 autocmd! BufWritePost * Neomake
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" CamelCaseMotion
+"-----------------------------------------------------------------------------------------------------------------------
+call camelcasemotion#CreateMotionMappings('<leader>')
+
