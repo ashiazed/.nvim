@@ -180,7 +180,9 @@ function! AckSearch()
   call inputsave()
   let term = input('Search: ')
   call inputrestore()
-  execute "Ack " . term
+  if !empty(term)
+      execute "Ack " . term
+  endif
 endfunction
 
 "-----------------------------------------------------------------------------------------------------------------------
