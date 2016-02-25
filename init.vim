@@ -5,7 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Creates indent lines, makes code a bit easier to read
 Plug 'nathanaelkane/vim-indent-guides'
-" Nerdtree file explorer, 4.2 for issue with devicons bug
+" Nerdtree file explorer
 Plug 'scrooloose/nerdtree'
 " Keep Nerdtree open across tabs
 Plug 'jistr/vim-nerdtree-tabs'
@@ -49,8 +49,6 @@ Plug 'stephpy/vim-yaml'
 Plug 'hdima/python-syntax'
 " PEP 8 checking
 Plug 'vim-scripts/pep8'
-" Python documention in vim
-Plug 'fs111/pydoc.vim'
 " Lines up code awesome
 Plug 'godlygeek/tabular'
 " Loads encrypted files by asking for password
