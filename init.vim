@@ -3,17 +3,15 @@
 "-----------------------------------------------------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
-" Faster navigation through files
-Plug 'ctrlpvim/ctrlp.vim'
 " Creates indent lines, makes code a bit easier to read
-Plug 'nathanaelkane/vim-indent-guides' 
+Plug 'nathanaelkane/vim-indent-guides'
 " Nerdtree file explorer, 4.2 for issue with devicons bug
 Plug 'scrooloose/nerdtree'
 " Keep Nerdtree open across tabs
-Plug 'jistr/vim-nerdtree-tabs'   
+Plug 'jistr/vim-nerdtree-tabs'
 " Better commenting commands
-Plug 'scrooloose/nerdcommenter'   
-" Git integration with vim 
+Plug 'scrooloose/nerdcommenter'
+" Git integration with vim
 Plug 'tpope/vim-fugitive'
 " Multiple cursors
 Plug 'terryma/vim-multiple-cursors'
@@ -23,6 +21,8 @@ Plug 'benekastah/neomake'
 Plug 'joonty/vdebug'
 " Provides yank history and buffer switching
 Plug 'Shougo/unite.vim'
+" Vimproc because fucking unite needs it
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " Provides yank history for unite
 Plug 'Shougo/neoyank.vim'
 " Snippets, beautiful snippets
@@ -174,7 +174,14 @@ cnoremap <leader>M <CR>:m''<CR>ddkP
 cnoremap <leader>d <CR>:d<CR>``
 " Use the enter key to insert tab completions
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
+" Ack search
+nnoremap <space>/ :call AckSearch()<CR>
+function! AckSearch()
+  call inputsave()
+  let term = input('Search: ')
+  call inputrestore()
+  execute "Ack " . term
+endfunction
 
 "-----------------------------------------------------------------------------------------------------------------------
 " Color/Theming Options
@@ -310,6 +317,9 @@ let g:unite_force_overwrite_statusline = 0
 let g:unite_winheight = 10
 let g:unite_source_history_yank_enable = 1
 let g:unite_source_rec_max_cache_files=5000
+let g:unite_source_rec_async_command =
+\ ['ack', '-f', '--nofilter']
+
 " Check to see if the plugin is loaded before callinging
 if exists('g:loaded_unite')
     call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
@@ -333,6 +343,8 @@ function! s:unite_settings()
   imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
   imap <silent><buffer><expr> <C-t> unite#do_action('tabopen')
 endfunction
+" CtrlP replacement
+nnoremap <C-p> :Unite file_rec/async<cr>
 "-----------------------------------------------------------------------------------------------------------------------
 
 
@@ -465,4 +477,6 @@ autocmd! BufWritePost * Neomake
 "-----------------------------------------------------------------------------------------------------------------------
 " CamelCaseMotion
 "-----------------------------------------------------------------------------------------------------------------------
-call camelcasemotion#CreateMotionMappings(',')
+map <silent> ,w <Plug>CamelCaseMotion_w
+map <silent> ,e <Plug>CamelCaseMotion_e
+map <silent> ,b <Plug>CamelCaseMotion_b
