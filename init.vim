@@ -3,6 +3,8 @@
 "-----------------------------------------------------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
+" Ctrl is just too good
+Plug 'ctrlpvim/ctrlp.vim'
 " Creates indent lines, makes code a bit easier to read
 Plug 'nathanaelkane/vim-indent-guides'
 " Nerdtree file explorer
@@ -343,8 +345,6 @@ function! s:unite_settings()
   imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
   imap <silent><buffer><expr> <C-t> unite#do_action('tabopen')
 endfunction
-" CtrlP replacement
-nnoremap <C-p> :Unite file_rec/async<cr>
 "-----------------------------------------------------------------------------------------------------------------------
 
 
