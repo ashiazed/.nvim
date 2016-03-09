@@ -12,7 +12,7 @@ Plug 'scrooloose/nerdtree'
 " Keep Nerdtree open across tabs
 Plug 'jistr/vim-nerdtree-tabs'
 " Better commenting commands
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 " Git integration with vim
 Plug 'tpope/vim-fugitive'
 " Multiple cursors
@@ -49,8 +49,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'stephpy/vim-yaml'
 " Better python highlighting
 Plug 'hdima/python-syntax'
-" PEP 8 checking
-Plug 'vim-scripts/pep8'
+" Python syntax editing
+Plug 'nvie/vim-flake8'
 " Lines up code awesome
 Plug 'godlygeek/tabular'
 " Loads encrypted files by asking for password
@@ -429,9 +429,11 @@ hi CtrlP_Violet  ctermfg=4  ctermbg=8
 
 
 "-----------------------------------------------------------------------------------------------------------------------
-" PEP8 Plugin
+" Flake8 Plugin
 "-----------------------------------------------------------------------------------------------------------------------
-let g:pep8_map='<F9>'
+autocmd FileType python map <buffer> <F9> :call Flake8()<CR>
+let g:flake8_show_in_gutter=1 
+autocmd BufWritePost *.py call Flake8()
 
 
 
