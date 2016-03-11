@@ -488,5 +488,5 @@ map <silent> ,b <Plug>CamelCaseMotion_b
 "-----------------------------------------------------------------------------------------------------------------------
 " Multiple Cursors
 "-----------------------------------------------------------------------------------------------------------------------
-let g:multi_cursor_exit_from_insert_mode = 0
+let g:multi_cursor_exit_from_insert_mode = 1
 let g:multi_cursor_exit_from_visual_mode = 1
