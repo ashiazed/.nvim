@@ -3,7 +3,7 @@
 "-----------------------------------------------------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
-" Ctrl is just too good
+" Ctrlp is just too good
 Plug 'ctrlpvim/ctrlp.vim'
 " Creates indent lines, makes code a bit easier to read
 Plug 'nathanaelkane/vim-indent-guides'
@@ -113,7 +113,7 @@ set backspace=indent,eol,start
 " Show the status bar always
 set laststatus=2 
 " Ignore useless files
-set wildignore=*/app/cache,*/vendor,*/env,*.pyc 
+set wildignore=*/app/cache,*/vendor,*/env,*.pyc,*/venv
 " Highlighting in vim leaves your cursor wherever you ended at
 :vmap y ygv<ESC> 
 " Stops flashing from command above and helps save on processing
