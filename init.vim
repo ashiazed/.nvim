@@ -3,74 +3,60 @@
 "-----------------------------------------------------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
-" Ctrlp is just too good
+" General Plugins
 Plug 'ctrlpvim/ctrlp.vim'
-" Creates indent lines, makes code a bit easier to read
-Plug 'nathanaelkane/vim-indent-guides'
-" Nerdtree file explorer
+Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
 Plug 'scrooloose/nerdtree'
-" Keep Nerdtree open across tabs
-Plug 'jistr/vim-nerdtree-tabs'
-" Better commenting commands
-Plug 'tpope/vim-commentary'
-" Git integration with vim
-Plug 'tpope/vim-fugitive'
-" Multiple cursors
+Plug 'scrooloose/syntastic' " Syntax checking
+Plug 'jistr/vim-nerdtree-tabs' " Keep Nerdtree open across tabs
+Plug 'tpope/vim-commentary' " Better commenting commands
+Plug 'tpope/vim-fugitive' " Git integration with vim
+Plug 'tpope/vim-surround' " Helps with surrounding text
 Plug 'terryma/vim-multiple-cursors'
-" Syntax Checker
-Plug 'benekastah/neomake'
-" Vdebug, essential for php code
+Plug 'benekastah/neomake' " Aysnc :make
+Plug 'Shougo/unite.vim' " Provides yank history and buffer switching
+Plug 'Shougo/vimproc.vim', { 'do': 'make' } " Vimproc because fucking unite needs it
+Plug 'Shougo/neoyank.vim' " Provides yank history for unite
+Plug 'SirVer/ultisnips' " Snippets, beautiful snippets
+Plug 'honza/vim-snippets' " Default snippets library
+Plug 'ervandew/supertab' " Supertab for awesome tabbing
+Plug 'godlygeek/tabular' " Lines up code awesome
+Plug 'jamessan/vim-gnupg' " Loads encrypted files by asking for password
+Plug 'gcmt/taboo.vim' " Rename Tabs
+Plug 'ryanoasis/vim-devicons', { 'tag': '0.8.0' } " Dev icons
+Plug 'rizzatti/dash.vim' " Dash Functionality
+Plug 'kshenoy/vim-signature' " Markers appear on side
+Plug 'Shougo/deoplete.nvim' " Dark powered asynchronous completion
+Plug 'bkad/CamelCaseMotion' " Camel Case based motions
+
+" PHP Plugins
 Plug 'joonty/vdebug'
-" Provides yank history and buffer switching
-Plug 'Shougo/unite.vim'
-" Vimproc because fucking unite needs it
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-" Provides yank history for unite
-Plug 'Shougo/neoyank.vim'
-" Snippets, beautiful snippets
-Plug 'SirVer/ultisnips'
-" Default snippets library
-Plug 'honza/vim-snippets'
-" Supertab for awesome tabbing
-Plug 'ervandew/supertab'
-" Helps with surrounding text
-Plug 'tpope/vim-surround'
-" html generator
+Plug 'shawncplus/phpcomplete.vim' " Improved PHP omni-completions
+Plug 'StanAngeloff/php.vim' " Better php syntax highlighting
+
+" HTML Plugins
 Plug 'mattn/emmet-vim'
-" Improved PHP omni-completions
-Plug 'shawncplus/phpcomplete.vim'
-" Better php syntax highlighting
-Plug 'StanAngeloff/php.vim'
-" Better Markdown Highlighting
-Plug 'plasticboy/vim-markdown'
-" Better c++ highlighting
+
+" Markdown Plugins
+Plug 'plasticboy/vim-markdown' " Syntax highlighting
+
+" C++ Plugins
 Plug 'octol/vim-cpp-enhanced-highlight'
-" Better yaml highlighting
-Plug 'stephpy/vim-yaml'
-" Better python highlighting
+
+" YAML Plugins
+Plug 'stephpy/vim-yaml' " Syntax highlighting
+
+" Python Plugins
 Plug 'hdima/python-syntax'
-" Python syntax editing
 Plug 'nvie/vim-flake8'
-" Lines up code awesome
-Plug 'godlygeek/tabular'
-" Loads encrypted files by asking for password
-Plug 'jamessan/vim-gnupg'
-" Rename Tabs
-Plug 'gcmt/taboo.vim'
-" Dev icons
-Plug 'ryanoasis/vim-devicons', { 'tag': '0.8.0' }
-" Dash Functionality
-Plug 'rizzatti/dash.vim'
-" Markers appear on side
-Plug 'kshenoy/vim-signature'
+Plug 'klen/python-mode'
+
 " Haskell plugins
 Plug 'dag/vim2hs'
+
 " Ack Plugin
 Plug 'mileszs/ack.vim'
-" Dark powered asynchronous completion
-Plug 'Shougo/deoplete.nvim'
-" Camel Case based motions
-Plug 'bkad/CamelCaseMotion'
+
 " Add plugins to &runtimepath
 call plug#end()
 
