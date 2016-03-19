@@ -173,7 +173,7 @@ cnoremap <leader>m <CR>:m''<CR>
 cnoremap <leader>M <CR>:m''<CR>ddkP
 cnoremap <leader>d <CR>:d<CR>``
 " Use the enter key to insert tab completions
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Ack search
 nnoremap <space>/ :call AckSearch()<CR>
 function! AckSearch()
