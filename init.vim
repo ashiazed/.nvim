@@ -192,9 +192,9 @@ endfunction
 "hi Search cterm=NONE ctermfg=1 ctermbg=15
 "
 "Colorscheme
-let g:solarized_termtrans=1
+" let g:solarized_termtrans=1
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 " Vim diff Colors
 highlight DiffAdd    cterm=NONE ctermfg=0 ctermbg=2 
 highlight DiffDelete cterm=NONE ctermfg=0 ctermbg=1
