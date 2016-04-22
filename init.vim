@@ -4,6 +4,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " General Plugins
+Plug 'morhetz/gruvbox'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
 Plug 'scrooloose/nerdtree'
@@ -192,7 +193,6 @@ endfunction
 "hi Search cterm=NONE ctermfg=1 ctermbg=15
 "
 "Colorscheme
-" let g:solarized_termtrans=1
 set background=dark
 colorscheme gruvbox
 " Vim diff Colors
