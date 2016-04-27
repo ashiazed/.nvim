@@ -19,7 +19,7 @@ Plug 'Shougo/unite.vim' " Provides yank history and buffer switching
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } " Vimproc because fucking unite needs it
 Plug 'Shougo/neoyank.vim' " Provides yank history for unite
 Plug 'SirVer/ultisnips' " Snippets, beautiful snippets
-Plug 'honza/vim-snippets' " Default snippets library
+Plug 'thornycrackers/vim-snippets' " Default snippets library
 Plug 'ervandew/supertab' " Supertab for awesome tabbing
 Plug 'godlygeek/tabular' " Lines up code awesome
 Plug 'jamessan/vim-gnupg' " Loads encrypted files by asking for password
@@ -102,8 +102,6 @@ set laststatus=2
 set wildignore=*/app/cache,*/vendor,*/env,*.pyc,*/venv
 " Highlighting in vim leaves your cursor wherever you ended at
 :vmap y ygv<ESC> 
-" Stops flashing from command above and helps save on processing
-set lazyredraw
 " Set Window splits
 set splitright
 set splitbelow
@@ -167,7 +165,7 @@ function! AckSearch()
   let term = input('Search: ')
   call inputrestore()
   if !empty(term)
-      execute "Ack " . term
+      execute "Ack '" . term . "'"
   endif
 endfunction
 
