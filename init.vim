@@ -27,8 +27,13 @@ Plug 'gcmt/taboo.vim' " Rename Tabs
 Plug 'ryanoasis/vim-devicons', { 'tag': '0.8.0' } " Dev icons
 Plug 'rizzatti/dash.vim' " Dash Functionality
 Plug 'kshenoy/vim-signature' " Markers appear on side
-Plug 'Shougo/deoplete.nvim' " Dark powered asynchronous completion
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
+
+" Deoplete
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
 " PHP Plugins
 Plug 'joonty/vdebug'
