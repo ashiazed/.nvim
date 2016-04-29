@@ -4,6 +4,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " General Plugins
+Plug 'morhetz/gruvbox'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
 Plug 'scrooloose/nerdtree'
