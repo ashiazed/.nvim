@@ -26,7 +26,6 @@ Plug 'jamessan/vim-gnupg' " Loads encrypted files by asking for password
 Plug 'gcmt/taboo.vim' " Rename Tabs
 Plug 'ryanoasis/vim-devicons', { 'tag': '0.8.0' } " Dev icons
 Plug 'rizzatti/dash.vim' " Dash Functionality
-Plug 'kshenoy/vim-signature' " Markers appear on side
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
 
 " Deoplete
@@ -46,9 +45,6 @@ Plug 'mattn/emmet-vim'
 " Markdown Plugins
 Plug 'plasticboy/vim-markdown' " Syntax highlighting
 
-" C++ Plugins
-Plug 'octol/vim-cpp-enhanced-highlight'
-
 " YAML Plugins
 Plug 'stephpy/vim-yaml' " Syntax highlighting
 
@@ -56,8 +52,11 @@ Plug 'stephpy/vim-yaml' " Syntax highlighting
 Plug 'hdima/python-syntax'
 Plug 'nvie/vim-flake8'
 
-" Haskell plugins
-Plug 'dag/vim2hs'
+" Javascript Plugin
+Plug 'elzr/vim-json'
+Plug 'othree/yajs.vim'
+Plug 'gavocanov/vim-js-indent'
+Plug 'sidorares/node-vim-debugger'
 
 " Ack Plugin
 Plug 'mileszs/ack.vim'
@@ -78,9 +77,9 @@ let mapleader="\\"
 " Expand tabs into spaces
 set expandtab 
 " Number of space that tab counts for
-set tabstop=4
+set tabstop=2
 " Number of spaces for each autoindent
-set shiftwidth=4
+set shiftwidth=2
 " Maximium width of text that is being inserted. 0 disables it
 set textwidth=0 
 " Set history of : commands
@@ -92,6 +91,7 @@ set cindent
 " Make sure indenting works
 filetype plugin indent on
 " Show line numbers
+set relativenumber
 set number 
 " Turn off TextWrapping
 set nowrap 
@@ -134,9 +134,7 @@ noremap <leader>q :quit!<CR>
 nnoremap gp `[v`]
 " Indent options
 autocmd FileType python set tabstop=4|set shiftwidth=4
-autocmd FileType htmljinja set tabstop=2|set shiftwidth=2
-autocmd FileType sh set tabstop=2|set shiftwidth=2
-autocmd FileType css set tabstop=2|set shiftwidth=2
+autocmd FileType php set tabstop=4|set shiftwidth=4
 autocmd FileType haskell set tabstop=8|set shiftwidth=4|set softtabstop=4
 " Yank withouth newline
 nmap yY ^y$
@@ -225,6 +223,8 @@ au BufNewFile,BufRead *.sls set filetype=yaml
 " Drupal Syntax
 au BufNewFile,BufRead *.inc set filetype=php
 au BufNewFile,BufRead *.module set filetype=php
+" EJS Syntax
+au BufRead,BufNewFile *.ejs set filetype=htmljinja
 " Change gutter color
 highlight SignColumn cterm=NONE ctermfg=0 ctermbg=8
 "-----------------------------------------------------------------------------------------------------------------------
@@ -395,6 +395,7 @@ let g:ctrlp_status_func = {
   \ 'main': 'CtrlP_main_status',
   \ 'prog': 'CtrlP_progress_status',
   \ }
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Arguments: focus, byfname, s:regexp, prv, item, nxt, marked
 "            a:1    a:2      a:3       a:4  a:5   a:6  a:7
 fu! CtrlP_main_status(...)
@@ -461,6 +462,13 @@ let g:deoplete#enable_at_startup = 1
 " Neomake
 "-----------------------------------------------------------------------------------------------------------------------
 autocmd! BufWritePost * Neomake
+" let g:neomake_javascript_enabled_makers = ['eslint']
+" let g:neomake_verbose=3
+" let g:neomake_javascript_eslint_maker = {
+"     \ 'args': ['--no-color', '--config ~/.eslintrc.json'],
+"     \ 'errorformat': '%f: line %l\, col %c\, %m'
+"     \ }
+" let g:neomake_logfile='/Users/hiarc/Sites/treehouse/neomake.log'
 
 
 
@@ -470,3 +478,10 @@ autocmd! BufWritePost * Neomake
 map <silent> ,w <Plug>CamelCaseMotion_w
 map <silent> ,e <Plug>CamelCaseMotion_e
 map <silent> ,b <Plug>CamelCaseMotion_b
+
+
+
+"-----------------------------------------------------------------------------------------------------------------------
+" Vim JSON
+"-----------------------------------------------------------------------------------------------------------------------
+let g:vim_json_syntax_conceal = 0
