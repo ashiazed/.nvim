@@ -57,6 +57,7 @@ Plug 'elzr/vim-json'
 Plug 'othree/yajs.vim'
 Plug 'gavocanov/vim-js-indent'
 Plug 'sidorares/node-vim-debugger'
+Plug 'digitaltoad/vim-pug'
 
 " Ack Plugin
 Plug 'mileszs/ack.vim'
@@ -462,12 +463,13 @@ let g:deoplete#enable_at_startup = 1
 " Neomake
 "-----------------------------------------------------------------------------------------------------------------------
 autocmd! BufWritePost * Neomake
-" let g:neomake_javascript_enabled_makers = ['eslint']
-" let g:neomake_verbose=3
-" let g:neomake_javascript_eslint_maker = {
-"     \ 'args': ['--no-color', '--config ~/.eslintrc.json'],
-"     \ 'errorformat': '%f: line %l\, col %c\, %m'
-"     \ }
+let g:neomake_javascript_enabled_makers = ['eslint']
+"let g:neomake_verbose = 3
+"let g:neomake_open_list = 1
+let g:neomake_javascript_eslint_maker = {
+    \ 'args': ['--no-color', '--format', 'compact', '--config', '~/.eslintrc.json'],
+    \ 'errorformat': '%f: line %l\, col %c\, %m'
+    \ }
 " let g:neomake_logfile='/Users/hiarc/Sites/treehouse/neomake.log'
 
 
