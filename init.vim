@@ -80,3 +80,5 @@ set clipboard+=unnamedplus " Use the system clipboard for copy/pasting
 :nnoremap <A-j> <C-w>j
 :nnoremap <A-k> <C-w>k
 :nnoremap <A-l> <C-w>l
+set backupdir^=~/.config/nvim/nvim-files/backups/
+set directory=~/.config/nvim/nvim-files/swaps/
