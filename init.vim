@@ -35,7 +35,7 @@ endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
 " PHP Plugins
-Plug 'joonty/vdebug'
+Plug 'thornycrackers/vdebug'
 Plug 'shawncplus/phpcomplete.vim' " Improved PHP omni-completions
 Plug 'StanAngeloff/php.vim' " Better php syntax highlighting
 
