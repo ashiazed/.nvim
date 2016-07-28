@@ -81,3 +81,7 @@ call plug#end()
 :nnoremap <A-l> <C-w>l
 set backupdir^=~/.config/nvim/nvim-files/backups/
 set directory=~/.config/nvim/nvim-files/swaps/
+
+
+let g:neomake_php_enabled_makers = ['phpcs']
+let g:neomake_php_phpcs_args_standard = "PSR2,Symfony2"
