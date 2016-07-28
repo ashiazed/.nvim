@@ -83,5 +83,13 @@ set backupdir^=~/.config/nvim/nvim-files/backups/
 set directory=~/.config/nvim/nvim-files/swaps/
 
 
+" Do
 let g:neomake_php_enabled_makers = ['phpcs']
-let g:neomake_php_phpcs_args_standard = "PSR2,Symfony2"
+let g:syntastic_php_checkers = ['php']
+
+" Use PEARish if it's available
+if !empty(glob($HOME.'/PEARish.xml'))
+  let g:neomake_php_phpcs_args_standard = $HOME."/PEARish.xml,PSR2,Symfony2"
+else
+  let g:neomake_php_phpcs_args_standard = "PEAR,PSR2,Symfony2"
+endif
