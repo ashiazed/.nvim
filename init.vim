@@ -14,7 +14,6 @@ Plug 'tpope/vim-commentary' " Better commenting commands
 Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
 Plug 'terryma/vim-multiple-cursors'
-Plug 'benekastah/neomake' " Aysnc :make
 Plug 'Shougo/unite.vim' " Provides yank history and buffer switching
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } " Vimproc because fucking unite needs it
 Plug 'Shougo/neoyank.vim' " Provides yank history for unite
@@ -83,13 +82,13 @@ set backupdir^=~/.config/nvim/nvim-files/backups/
 set directory=~/.config/nvim/nvim-files/swaps/
 
 
-" Do
-let g:neomake_php_enabled_makers = ['phpcs']
-let g:syntastic_php_checkers = ['php']
-
-" Use PEARish if it's available
-if !empty(glob($HOME.'/PEARish.xml'))
-  let g:neomake_php_phpcs_args_standard = $HOME."/PEARish.xml,PSR2,Symfony2"
-else
-  let g:neomake_php_phpcs_args_standard = "PEAR,PSR2,Symfony2"
-endif
+let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_php_phpcs_args = "--standard=".$HOME."/PEARish.xml,PSR2,Symfony2"
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+noremap <leader>[ :lprevious<CR>
+noremap <leader>] :lnext<CR>
+noremap <leader>p :ll<CR>
