@@ -49,7 +49,6 @@ Plug 'stephpy/vim-yaml' " Syntax highlighting
 
 " Python Plugins
 Plug 'hdima/python-syntax'
-Plug 'nvie/vim-flake8'
 
 " Javascript Plugin
 Plug 'elzr/vim-json'
