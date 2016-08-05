@@ -93,4 +93,8 @@ let g:syntastic_aggregate_errors = 1
 noremap <leader>[ :lprevious<CR>
 noremap <leader>] :lnext<CR>
 noremap <leader>p :ll<CR>
+
+" Disable the mapping it overwrites leader q
+let g:toggle_list_no_mappings = 1
 nmap <script> <silent> <leader>l :call ToggleLocationList()<CR>
+
