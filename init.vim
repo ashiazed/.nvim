@@ -26,6 +26,7 @@ Plug 'ryanoasis/vim-devicons', { 'tag': '0.8.0' } " Dev icons
 Plug 'rizzatti/dash.vim' " Dash Functionality
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
 Plug 'thornycrackers/vim-options' " Vim options
+Plug 'milkypostman/vim-togglelist' " toggle the location list
 
 " Deoplete
 function! DoRemote(arg)
@@ -85,10 +86,11 @@ let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_php_phpcs_args = "--standard=".$HOME."/PEARish.xml,PSR2,Symfony2"
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 noremap <leader>[ :lprevious<CR>
 noremap <leader>] :lnext<CR>
 noremap <leader>p :ll<CR>
+nmap <script> <silent> <leader>l :call ToggleLocationList()<CR>
