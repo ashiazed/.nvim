@@ -83,3 +83,11 @@ set directory=~/.config/nvim/nvim-files/swaps/
 
 
 
+" Making ctrl-p better and faster
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ackprg = 'ag --vimgrep'
+endif
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_cache_dir = '.'
+let g:ctrlp_map = '<Space>p'
