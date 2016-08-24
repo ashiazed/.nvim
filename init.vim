@@ -89,5 +89,5 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_cache_dir = $HOME.'/vimcache/ctrlp'
+let g:ctrlp_cache_dir = './.vimcache/ctrlp'
 let g:ctrlp_map = '<Space>p'
