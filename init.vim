@@ -61,6 +61,9 @@ Plug 'digitaltoad/vim-pug'
 " Ack Plugin
 Plug 'mileszs/ack.vim'
 
+" Elixir Plugins
+Plug 'elixir-lang/vim-elixir'
+
 " Add plugins to &runtimepath
 call plug#end()
 
