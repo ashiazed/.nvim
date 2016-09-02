@@ -33,6 +33,7 @@ function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'zchee/deoplete-jedi'
 
 " PHP Plugins
 Plug 'thornycrackers/vdebug'
