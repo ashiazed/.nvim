@@ -7,7 +7,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
-Plug 'scrooloose/nerdtree'
+Plug 'thornycrackers/nerdtree'
 Plug 'scrooloose/syntastic' " Syntax checking
 Plug 'jistr/vim-nerdtree-tabs' " Keep Nerdtree open across tabs
 Plug 'tpope/vim-commentary' " Better commenting commands
