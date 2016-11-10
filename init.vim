@@ -27,6 +27,7 @@ Plug 'rizzatti/dash.vim' " Dash Functionality
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
 Plug 'thornycrackers/vim-options' " Vim options
 Plug 'milkypostman/vim-togglelist' " toggle the location list
+Plug 'tmhedberg/SimpylFold' " Folding for python
 
 " Deoplete
 function! DoRemote(arg)
