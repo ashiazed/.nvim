@@ -90,3 +90,24 @@ let g:ctrlp_cache_dir = './.vimcache/ctrlp'
 let g:ctrlp_map = '<Space>p'
 let g:deoplete#sources#jedi#python_path = '/usr/bin/python3'
 let g:syntastic_python_python_exec = '/usr/bin/python3'
+function! SaveSession()
+  :mksession! ./.vimcache/session.vim
+  :echo 'Session Saved!'
+endfunction
+
+function! RestoreSession()
+  :source ./.vimcache/session.vim
+endfunction
+
+nnoremap <leader>ee :call SaveSession()<CR>
+nnoremap <leader>er :call RestoreSession()<CR>
+function! RenameTab()
+  call inputsave()
+  let term = input('Tabname: ')
+  call inputrestore()
+  if !empty(term)
+    execute ":TabooRename " . term
+  endif
+endfunction
+
+nnoremap <leader>r :call RenameTab()<CR>
