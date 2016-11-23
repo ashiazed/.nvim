@@ -111,3 +111,8 @@ function! RenameTab()
 endfunction
 
 nnoremap <leader>r :call RenameTab()<CR>
+
+" Last tab command
+let g:lasttab = 1
+nmap <Leader>tt :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
