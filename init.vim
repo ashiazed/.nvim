@@ -116,3 +116,6 @@ nnoremap <leader>r :call RenameTab()<CR>
 let g:lasttab = 1
 nmap <Leader>tt :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
+
+" PHP files are using tabs, expandtab is not found?
+autocmd FileType php set noexpandtab!
