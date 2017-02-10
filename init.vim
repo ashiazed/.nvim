@@ -120,6 +120,10 @@ au TabLeave * let g:lasttab = tabpagenr()
 " PHP files are using tabs, expandtab is not found?
 autocmd FileType php set noexpandtab!
 
+" Create the dirs
+silent! execute "!mkdir -p ./.vimcache/backup"
+silent! execute "!mkdir -p ./.vimcache/undo"
+
 " Set Backup dirs
 set undodir=./.vimcache/undo//
 set backupdir=./.vimcache/backup//
