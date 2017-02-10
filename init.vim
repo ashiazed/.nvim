@@ -28,6 +28,7 @@ Plug 'bkad/CamelCaseMotion' " Camel Case based motions
 Plug 'thornycrackers/vim-options' " Vim options
 Plug 'milkypostman/vim-togglelist' " toggle the location list
 Plug 'tmhedberg/SimpylFold' " Folding for python
+Plug 'ledger/vim-ledger' " Vim Ledger
 
 " Deoplete
 function! DoRemote(arg)
@@ -128,3 +129,6 @@ silent! execute "!mkdir -p ./.vimcache/undo"
 set undodir=./.vimcache/undo//
 set backupdir=./.vimcache/backup//
 set directory=./.vimcache/swp//
+
+" Ledger 
+au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
