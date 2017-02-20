@@ -16,6 +16,7 @@ Plug 'tmhedberg/SimpylFold' " Folding for python
 Plug 'tpope/vim-commentary' " Better commenting commands
 Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
+Plug 'tmhedberg/matchit' " Match tags in html
 
 " Syntax highlighting / Themes
 Plug 'morhetz/gruvbox' " Pretty colorscheme
