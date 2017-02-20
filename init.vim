@@ -30,6 +30,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'elixir-lang/vim-elixir'
 Plug 'othree/yajs.vim' " Javascript syntax
 Plug 'gavocanov/vim-js-indent'
+Plug 'mitsuhiko/vim-jinja'
 
 " My custom options
 Plug 'thornycrackers/vim-options'
