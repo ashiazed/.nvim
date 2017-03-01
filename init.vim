@@ -18,13 +18,14 @@ Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
 Plug 'tmhedberg/matchit' " Match tags in html
 
-" Syntax highlighting / Themes
+" Syntax highlighting / Themes / Indentation
 Plug 'morhetz/gruvbox' " Pretty colorscheme
 Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
 Plug 'plasticboy/vim-markdown'
 Plug 'ledger/vim-ledger'
 Plug 'stephpy/vim-yaml'
 Plug 'hdima/python-syntax'
+Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'elzr/vim-json'
 Plug 'digitaltoad/vim-pug'
 Plug 'elixir-lang/vim-elixir'
