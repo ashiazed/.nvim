@@ -32,6 +32,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'othree/yajs.vim' " Javascript syntax
 Plug 'gavocanov/vim-js-indent'
 Plug 'mitsuhiko/vim-jinja'
+Plug 'cakebaker/scss-syntax.vim'
 
 " My custom options
 Plug 'thornycrackers/vim-options'
