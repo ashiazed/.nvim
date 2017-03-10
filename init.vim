@@ -12,7 +12,6 @@ Plug 'jamessan/vim-gnupg' " Loads encrypted files by asking for password
 Plug 'gcmt/taboo.vim' " Rename Tabs
 Plug 'mattn/emmet-vim' " HTML expansion plugin, very useful
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
-Plug 'tmhedberg/SimpylFold' " Folding for python
 Plug 'tpope/vim-commentary' " Better commenting commands
 Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
