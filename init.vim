@@ -17,6 +17,7 @@ Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
 Plug 'tmhedberg/matchit' " Match tags in html
 Plug 'FooSoft/vim-argwrap' " Wrap or unwrap arguments to functions
+Plug 'scrooloose/nerdtree'  " I hate NerdTree but I hate netrw even more
 
 " Syntax highlighting / Themes / Indentation
 Plug 'morhetz/gruvbox' " Pretty colorscheme
