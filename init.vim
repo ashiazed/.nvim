@@ -20,6 +20,9 @@ Plug 'FooSoft/vim-argwrap' " Wrap or unwrap arguments to functions
 Plug 'scrooloose/nerdtree'  " I hate NerdTree but I hate netrw even more
 Plug 'baverman/vial' " Needed for below
 Plug 'baverman/vial-http' " Send HTTP requests in vim
+Plug 'haya14busa/incsearch.vim' " Improved incremental search
+Plug 'haya14busa/incsearch-easymotion.vim' " Incsearch with easymotion
+Plug 'easymotion/vim-easymotion' " Fast jumping around file
 
 " Syntax highlighting / Themes / Indentation
 Plug 'morhetz/gruvbox' " Pretty colorscheme
