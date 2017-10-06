@@ -5,7 +5,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Extending vim functionality
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
-Plug 'scrooloose/syntastic' " Syntax checking
+" Plug 'scrooloose/syntastic' " Syntax checking
+Plug 'w0rp/ale' " Syntax checking
 Plug 'terryma/vim-multiple-cursors' " Multipe cursors, like the sublime feature
 Plug 'godlygeek/tabular' " Lines up code
 Plug 'jamessan/vim-gnupg' " Loads encrypted files by asking for password
