@@ -24,6 +24,7 @@ Plug 'baverman/vial-http' " Send HTTP requests in vim
 Plug 'haya14busa/incsearch.vim' " Improved incremental search
 Plug 'haya14busa/incsearch-easymotion.vim' " Incsearch with easymotion
 Plug 'easymotion/vim-easymotion' " Fast jumping around file
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Super autocomplete
 
 " Syntax highlighting / Themes / Indentation
 Plug 'morhetz/gruvbox' " Pretty colorscheme
