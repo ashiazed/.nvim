@@ -5,7 +5,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Extending vim functionality
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
-" Plug 'scrooloose/syntastic' " Syntax checking
 Plug 'w0rp/ale' " Syntax checking
 Plug 'terryma/vim-multiple-cursors' " Multipe cursors, like the sublime feature
 Plug 'godlygeek/tabular' " Lines up code
@@ -28,7 +27,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf install
 Plug 'junegunn/fzf.vim' " fzf integration
 Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
 Plug 'francoiscabrol/ranger.vim' " ranger intergration
-Plug 'mileszs/ack.vim' " Ack integration
 
 " Syntax highlighting / Themes / Indentation
 Plug 'morhetz/gruvbox' " Pretty colorscheme
