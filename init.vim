@@ -18,13 +18,17 @@ Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
 Plug 'tmhedberg/matchit' " Match tags in html
 Plug 'FooSoft/vim-argwrap' " Wrap or unwrap arguments to functions
-Plug 'scrooloose/nerdtree'  " I hate NerdTree but I hate netrw even more
 Plug 'baverman/vial' " Needed for below
 Plug 'baverman/vial-http' " Send HTTP requests in vim
 Plug 'haya14busa/incsearch.vim' " Improved incremental search
 Plug 'haya14busa/incsearch-easymotion.vim' " Incsearch with easymotion
 Plug 'easymotion/vim-easymotion' " Fast jumping around file
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Super autocomplete
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf install
+Plug 'junegunn/fzf.vim' " fzf integration
+Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
+Plug 'francoiscabrol/ranger.vim' " ranger intergration
+Plug 'mileszs/ack.vim' " Ack integration
 
 " Syntax highlighting / Themes / Indentation
 Plug 'morhetz/gruvbox' " Pretty colorscheme
