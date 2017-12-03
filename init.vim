@@ -23,10 +23,15 @@ Plug 'haya14busa/incsearch.vim' " Improved incremental search
 Plug 'haya14busa/incsearch-easymotion.vim' " Incsearch with easymotion
 Plug 'easymotion/vim-easymotion' " Fast jumping around file
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Super autocomplete
+Plug 'zchee/deoplete-jedi' " Deoplete for jedi
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf install
 Plug 'junegunn/fzf.vim' " fzf integration
 Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
 Plug 'francoiscabrol/ranger.vim' " ranger intergration
+Plug 'majutsushi/tagbar' " View tags for file in bar
+Plug 'yuttie/comfortable-motion.vim' " Better scrolling
+Plug 'kien/rainbow_parentheses.vim' " Colored brackets
+Plug 'ervandew/supertab' " better tab complete
 
 " Syntax highlighting / Themes / Indentation
 Plug 'morhetz/gruvbox' " Pretty colorscheme
@@ -34,14 +39,14 @@ Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit 
 Plug 'plasticboy/vim-markdown'
 Plug 'ledger/vim-ledger'
 Plug 'stephpy/vim-yaml'
-Plug 'hdima/python-syntax'
+Plug 'mitsuhiko/vim-python-combined'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'elzr/vim-json'
 Plug 'digitaltoad/vim-pug'
 Plug 'elixir-lang/vim-elixir'
 Plug 'othree/yajs.vim' " Javascript syntax
 Plug 'gavocanov/vim-js-indent'
-Plug 'mitsuhiko/vim-jinja'
+Plug 'lepture/vim-jinja'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chr4/nginx.vim'
 
@@ -49,4 +54,7 @@ Plug 'chr4/nginx.vim'
 Plug 'thornycrackers/vim-options'
 
 call plug#end()
+
+" Enable Deoplete
+let g:deoplete#enable_at_startup = 1
 "-----------------------------------------------------------------------------------------------------------------------
