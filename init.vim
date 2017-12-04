@@ -29,9 +29,9 @@ Plug 'junegunn/fzf.vim' " fzf integration
 Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
 Plug 'francoiscabrol/ranger.vim' " ranger intergration
 Plug 'majutsushi/tagbar' " View tags for file in bar
-Plug 'yuttie/comfortable-motion.vim' " Better scrolling
 Plug 'kien/rainbow_parentheses.vim' " Colored brackets
 Plug 'ervandew/supertab' " better tab complete
+Plug 'python-mode/python-mode' " python amazingness
 
 " Syntax highlighting / Themes / Indentation
 Plug 'morhetz/gruvbox' " Pretty colorscheme
