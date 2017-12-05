@@ -32,6 +32,7 @@ Plug 'majutsushi/tagbar' " View tags for file in bar
 Plug 'kien/rainbow_parentheses.vim' " Colored brackets
 Plug 'ervandew/supertab' " better tab complete
 Plug 'python-mode/python-mode' " python amazingness
+Plug 'sunaku/vim-dasht' " Dash docs
 
 " Syntax highlighting / Themes / Indentation
 Plug 'morhetz/gruvbox' " Pretty colorscheme
