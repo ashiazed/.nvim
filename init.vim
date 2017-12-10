@@ -22,7 +22,7 @@ Plug 'baverman/vial-http' " Send HTTP requests in vim
 Plug 'haya14busa/incsearch.vim' " Improved incremental search
 Plug 'haya14busa/incsearch-easymotion.vim' " Incsearch with easymotion
 Plug 'easymotion/vim-easymotion' " Fast jumping around file
-Plug 'Shougo/deoplete.nvim', { 'tag': '2.0', 'do': ':UpdateRemotePlugins' } " Super autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Super autocomplete
 Plug 'zchee/deoplete-jedi' " Deoplete for jedi
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf install
 Plug 'junegunn/fzf.vim' " fzf integration
