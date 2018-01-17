@@ -58,4 +58,8 @@ call plug#end()
 
 " Enable Deoplete
 let g:deoplete#enable_at_startup = 1
+
+" These options don't work inside vim-options
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
 "-----------------------------------------------------------------------------------------------------------------------
