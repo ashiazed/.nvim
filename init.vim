@@ -5,7 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Extending vim functionality
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
-Plug 'w0rp/ale' " Syntax checking
+Plug 'vim-syntastic/syntastic' " Syntax checking
 Plug 'terryma/vim-multiple-cursors' " Multipe cursors, like the sublime feature
 Plug 'godlygeek/tabular' " Lines up code
 Plug 'jamessan/vim-gnupg' " Loads encrypted files by asking for password
@@ -58,8 +58,4 @@ call plug#end()
 
 " Enable Deoplete
 let g:deoplete#enable_at_startup = 1
-
-" These options don't work inside vim-options
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
 "-----------------------------------------------------------------------------------------------------------------------
