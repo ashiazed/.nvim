@@ -51,6 +51,7 @@ Plug 'lepture/vim-jinja'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chr4/nginx.vim'
 Plug 'reedes/vim-pencil'
+Plug 'junegunn/goyo.vim'
 
 " My custom options
 Plug 'thornycrackers/vim-options'
