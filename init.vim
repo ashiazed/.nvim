@@ -50,6 +50,7 @@ Plug 'gavocanov/vim-js-indent'
 Plug 'lepture/vim-jinja'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chr4/nginx.vim'
+Plug 'reedes/vim-pencil'
 
 " My custom options
 Plug 'thornycrackers/vim-options'
