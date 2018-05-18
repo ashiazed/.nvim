@@ -5,7 +5,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Extending vim functionality
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
-Plug 'w0rp/ale' " Syntax checking
+"Plug 'w0rp/ale' " Syntax checking
+Plug 'vim-syntastic/syntastic' " Finding linter errors
 Plug 'terryma/vim-multiple-cursors' " Multipe cursors, like the sublime feature
 Plug 'godlygeek/tabular' " Lines up code
 Plug 'jamessan/vim-gnupg' " Loads encrypted files by asking for password
@@ -30,7 +31,6 @@ Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
 Plug 'francoiscabrol/ranger.vim' " ranger intergration
 Plug 'majutsushi/tagbar' " View tags for file in bar
 Plug 'kien/rainbow_parentheses.vim' " Colored brackets
-Plug 'ervandew/supertab' " better tab complete
 Plug 'python-mode/python-mode' " python amazingness
 Plug 'sunaku/vim-dasht' " Dash docs
 
