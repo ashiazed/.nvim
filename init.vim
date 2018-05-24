@@ -30,7 +30,7 @@ Plug 'junegunn/fzf.vim' " fzf integration
 Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
 Plug 'francoiscabrol/ranger.vim' " ranger intergration
 Plug 'majutsushi/tagbar' " View tags for file in bar
-Plug 'kien/rainbow_parentheses.vim' " Colored brackets
+Plug 'eapache/rainbow_parentheses.vim' " Colored Brackets
 Plug 'python-mode/python-mode' " python amazingness
 Plug 'sunaku/vim-dasht' " Dash docs
 
