@@ -5,7 +5,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Extending vim functionality
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
-"Plug 'w0rp/ale' " Syntax checking
 Plug 'vim-syntastic/syntastic' " Finding linter errors
 Plug 'terryma/vim-multiple-cursors' " Multipe cursors, like the sublime feature
 Plug 'godlygeek/tabular' " Lines up code
@@ -16,12 +15,7 @@ Plug 'bkad/CamelCaseMotion' " Camel Case based motions
 Plug 'tpope/vim-commentary' " Better commenting commands
 Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
-Plug 'tmhedberg/matchit' " Match tags in html
 Plug 'FooSoft/vim-argwrap' " Wrap or unwrap arguments to functions
-Plug 'baverman/vial' " Needed for below
-Plug 'baverman/vial-http' " Send HTTP requests in vim
-Plug 'haya14busa/incsearch.vim' " Improved incremental search
-Plug 'haya14busa/incsearch-easymotion.vim' " Incsearch with easymotion
 Plug 'easymotion/vim-easymotion' " Fast jumping around file
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Super autocomplete
 Plug 'zchee/deoplete-jedi' " Deoplete for jedi
@@ -32,7 +26,6 @@ Plug 'francoiscabrol/ranger.vim' " ranger intergration
 Plug 'majutsushi/tagbar' " View tags for file in bar
 Plug 'eapache/rainbow_parentheses.vim' " Colored Brackets
 Plug 'python-mode/python-mode' " python amazingness
-Plug 'sunaku/vim-dasht' " Dash docs
 
 " Syntax highlighting / Themes / Indentation
 Plug 'morhetz/gruvbox' " Pretty colorscheme
