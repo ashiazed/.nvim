@@ -22,7 +22,6 @@ Plug 'eapache/rainbow_parentheses.vim' " Colored Brackets
 " File Type Specific
 Plug 'ledger/vim-ledger' " Ledger plugin
 Plug 'python-mode/python-mode' " Python awesomeness in vim
-" Plug 'Glench/Vim-Jinja2-Syntax' " Jinja Syntax
 
 " My custom options
 Plug 'thornycrackers/vim-options'
