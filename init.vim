@@ -18,6 +18,7 @@ Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Install fzf
 Plug 'junegunn/fzf.vim' " fzf integration
 Plug 'eapache/rainbow_parentheses.vim' " Colored Brackets
+Plug 'saltstack/salt-vim' " Salt file plugin
 
 " File Type Specific
 Plug 'ledger/vim-ledger' " Ledger plugin
