@@ -26,7 +26,7 @@ Plug 'python-mode/python-mode' " Python awesomeness in vim
 Plug 'chr4/nginx.vim' " nginx goodness
 
 " My custom options
-Plug 'thornycrackers/vim-options'
+Plug 'ashiazed/vim-options'
 
 call plug#end()
 
